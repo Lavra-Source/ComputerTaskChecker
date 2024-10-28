@@ -8,6 +8,7 @@ from taskui import TaskUI
 
 root = Tk()
 root.title("Учебное пособие по информатике")
+root.geometry("640x480")
 t_ui = TaskUI(1, root)
 t_ui.update_gui()
 root.mainloop()
