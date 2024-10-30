@@ -1,4 +1,5 @@
-from fileobj import FileObj
+from converter import path_to_dict
+import os
 
 class Checker:
 
@@ -7,5 +8,7 @@ class Checker:
         self.step = step
         self.temp = True
     def check(self):
-        self.temp = not self.temp #TODO actually implement this
-        return self.temp
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        root_dir = os.path.dirname(current_dir)
+        task_dir = os.path.join(root_dir, 'work')
+        return path_to_dict(task_dir)==self.tasks[self.step][1]

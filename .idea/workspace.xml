@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="basics i guess">
+    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="barebones task ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tasks/Task1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/fileobj.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/fileobj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/reverser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/reverser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/taskparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/taskparser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/taskui.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/taskui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +41,9 @@
     &quot;accountId&quot;: &quot;7c1d6774-c6f6-4c26-a25e-9282dce0202b&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -45,18 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.taskui.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/MyProjects/InteractiveLearning&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main.executor": "Run",
+    "Python.converter.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.taskparser.executor": "Run",
+    "Python.taskui.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/MyProjects/InteractiveLearning",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyProjects\InteractiveLearning\Tasks" />
+      <recent name="D:\MyProjects\InteractiveLearning" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python">
       <module name="InteractiveLearning" />
@@ -114,11 +130,20 @@
       <option name="project" value="LOCAL" />
       <updated>1730011813075</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="barebones task ui">
+      <option name="closed" value="true" />
+      <created>1730100855483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730100855483</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basics i guess" />
-    <option name="LAST_COMMIT_MESSAGE" value="basics i guess" />
+    <MESSAGE value="barebones task ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="barebones task ui" />
   </component>
 </project>
