@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="revamp">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/Task1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/Task1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/reverser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/reverser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/taskui.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/taskui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/converter.py" afterDir="false" />
+    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="uhhhhhhh">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,13 +147,22 @@
       <option name="project" value="LOCAL" />
       <updated>1730284362301</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="uhhhhhhh">
+      <option name="closed" value="true" />
+      <created>1742285377130</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742285377130</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basics i guess" />
     <MESSAGE value="barebones task ui" />
     <MESSAGE value="revamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="revamp" />
+    <MESSAGE value="uhhhhhhh" />
+    <option name="LAST_COMMIT_MESSAGE" value="uhhhhhhh" />
   </component>
 </project>
