@@ -15,7 +15,7 @@ class Reverser:
                 new_path = os.path.join(file_path, i["name"])
                 self.create(i, new_path)
     def __init__(self, tasks, step):
-        self.tasks = [["", {"name": "work", "type": "directory", "children":[]}]] + tasks
+        self.tasks = tasks
         self.step = step
     def reverse_to_step(self, step):
         self.step = step

@@ -21,12 +21,14 @@ def path_to_dict(path):
     return d
 
 if __name__ == "__main__":
-    print("input number of tasks")
+    print("input number of subtasks")
     n = int(input())
     for i in range(n):
+        input("enter to start a new task")
+        dict1 = path_to_dict('./work')
         print("arrange the files properly and type in the task description, then hit Enter")
         description = input()
-        tasks.append([description, path_to_dict('./work')])
-    with open("result.json", 'w') as file:
+        tasks.append([description, dict1, path_to_dict('./work')])
+    with open("Tasks/Task1.json", 'w') as file:
         file.write(json.dumps(tasks))
 print (json.dumps(tasks))

@@ -11,4 +11,4 @@ class Checker:
         current_dir = os.path.dirname(os.path.abspath(__file__))
         root_dir = os.path.dirname(current_dir)
         task_dir = os.path.join(root_dir, 'work')
-        return path_to_dict(task_dir)==self.tasks[self.step][1]
+        return path_to_dict(task_dir)==self.tasks[self.step][2]

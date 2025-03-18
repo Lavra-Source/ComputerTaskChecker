@@ -12,9 +12,15 @@ from reverser import Reverser
 class TaskUI:
 
     def advance_step(self):
+
         self.current_step+=1
         self.checker.step = self.current_step
         self.max_step = max(self.max_step, self.current_step)
+        if self.max_step == len(self.tasks):
+            self.max_step-=1
+            self.current_step-=1
+            showinfo(message="Вы завершили урок!")
+            quit()
         self.update_gui()
     def set_step(self, step):
         self.checker.step = step
@@ -45,7 +51,7 @@ class TaskUI:
         self.checker = Checker(self.tasks, self.current_step)
         self.reverser = Reverser(self.tasks, self.current_step)
         s = ttk.Style()
-        s.configure('Correct.TButton', foreground='green')
+        s.configure('Correct.TButton', background='green')
 
         frame = ttk.Frame(root, padding=[5,5,5,10])
         frame.pack(fill="both", expand=True)
@@ -65,6 +71,7 @@ class TaskUI:
         self.task_description.grid(column=0, row = 1, sticky = "nw")
         self.check_button.grid(column = 0, row = 2, sticky = "s")
         self.update_gui()
+        self.set_step(0)
 
     def update_gui(self):
 
@@ -73,11 +80,12 @@ class TaskUI:
             if i > self.max_step:
                 self.task_buttons[i].configure(state="disabled")
             else:
-                self.task_buttons[i].configure(state="normal", style='Correct.TButton')
+                self.task_buttons[i].configure(state="normal")
             if i == self.current_step:
                 self.task_buttons[i].configure(style = "TButton")
 
     def check(self):
+
         if self.checker.check():
             self.advance_step()
             showinfo(message="Поздравляю")
