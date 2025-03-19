@@ -22,6 +22,6 @@ class Reverser:
         current_dir = os.path.dirname(os.path.abspath(__file__))
         root_dir = os.path.dirname(current_dir)
         task_dir = os.path.join(root_dir, 'work')
-        shutil.rmtree(task_dir)
+        shutil.rmtree(task_dir, ignore_errors=False)
         self.create(self.tasks[step][1], task_dir)
-        print(f"reversed to step {step}") #TODO actually implement dis
+        print(f"reversed to step {step}")

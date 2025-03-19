@@ -8,7 +8,7 @@ from taskui import TaskUI
 
 root = Tk()
 root.title("Учебное пособие по информатике")
-root.geometry("640x480")
+root.geometry("1280x600")
 s = ttk.Style()
 s.configure("Correct.TBtutton", background="green")
 root.columnconfigure(0, weight=1)

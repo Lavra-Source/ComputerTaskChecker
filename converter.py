@@ -28,7 +28,8 @@ if __name__ == "__main__":
         dict1 = path_to_dict('./work')
         print("arrange the files properly and type in the task description, then hit Enter")
         description = input()
-        tasks.append([description, dict1, path_to_dict('./work')])
+        image = input("image file path")
+        tasks.append([description, dict1, path_to_dict('./work'), image])
     with open("Tasks/Task1.json", 'w') as file:
         file.write(json.dumps(tasks))
 print (json.dumps(tasks))

@@ -2,36 +2,41 @@ import os
 import shutil
 from functools import partial
 from tkinter import *
-from tkinter import ttk
+from tkinter import PhotoImage
 from tkinter.messagebox import showinfo, showerror
 
 from checker import Checker
 from taskparser import TaskParser
 from reverser import Reverser
+from scrollframe import ScrollFrame
 
 class TaskUI:
 
     def advance_step(self):
-
-        self.current_step+=1
-        self.checker.step = self.current_step
-        self.max_step = max(self.max_step, self.current_step)
-        if self.max_step == len(self.tasks):
-            self.max_step-=1
-            self.current_step-=1
+        if False not in self.completed:
             showinfo(message="Вы завершили урок!")
             quit()
+        else:
+            while self.completed[self.current_step]:
+                self.current_step+=1
+                self.current_step %= len(self.tasks)
+                self.checker.step = self.current_step
+
         self.update_gui()
     def set_step(self, step):
         self.checker.step = step
         self.reverser.reverse_to_step(step)
         self.current_step = step
         self.update_gui()
-
+    def resize_to_width(self, target_width, img):
+        w = img.width()
+        img = img.zoom(target_width, target_width)
+        img = img.subsample(w,w)
+        return img
     def __init__(self, task_number, root):
 
 
-        # Get Taski.txt
+        # Get Task1.json
         current_dir = os.path.dirname(os.path.abspath(__file__))
         root_dir = os.path.dirname(current_dir)
         task_dir = os.path.join(root_dir, 'Tasks')
@@ -46,47 +51,56 @@ class TaskUI:
 
         self.tasks =self.task_parser.parse()
         self.current_step = 0
-        self.max_step = 0
+        self.completed = [False for i in range(len(self.tasks))]
 
         self.checker = Checker(self.tasks, self.current_step)
         self.reverser = Reverser(self.tasks, self.current_step)
-        s = ttk.Style()
-        s.configure('Correct.TButton', background='green')
 
-        frame = ttk.Frame(root, padding=[5,5,5,10])
+        frame = Frame(root)
         frame.pack(fill="both", expand=True)
         frame.rowconfigure(1, weight=1)
         frame.columnconfigure(0, weight=1)
-        task_frame = ttk.Frame(frame, relief=RAISED, padding=[2,1,2,1])
+        task_frame = Frame(frame, relief=RAISED, pady=5, padx=3)
         task_frame.grid(column=0, row = 0,sticky = "nwse")
-
+        a_frame = ScrollFrame(frame)
+        a_frame.grid(column=0, row=1, sticky="nwse")
+        main_frame = Frame(a_frame.viewPort)
+        main_frame.configure(bg = "white")
+        main_frame.pack(fill = BOTH, side = LEFT)
         self.task_buttons = []
-        self.task_description = ttk.Label(frame, text=self.tasks[self.current_step][0])
-        self.check_button = ttk.Button(frame, text = "Проверить", command=self.check)
+        self.task_description = Label(main_frame, text=self.tasks[self.current_step][0], wraplength=500, bg="white", justify="left")
+        self.img = PhotoImage(file = self.tasks[self.current_step][3]).subsample(1,1)
+        self.task_image = Label(main_frame, image = self.img)
+        self.check_button = Button(frame, text = "Проверить", command=self.check, bg = "light green")
         for i in range(len(self.tasks)):
             cmd = partial( self.set_step, i)
-            self.task_buttons.append(ttk.Button(task_frame, text = str(i+1), command=cmd, width = 2))
+            self.task_buttons.append(Button(task_frame, text = str(i+1), command=cmd, width = 2))
             self.task_buttons[i].grid(column = i, row = 0, sticky = "nw")
-
-        self.task_description.grid(column=0, row = 1, sticky = "nw")
-        self.check_button.grid(column = 0, row = 2, sticky = "s")
+        self.task_description.grid(column = 0, row = 0, sticky = "nw")
+        self.check_button.grid(column = 0, row = 2, sticky = "s", pady = 10)
+        self.task_image.grid(column = 0, row = 1, sticky = "e")
         self.update_gui()
         self.set_step(0)
 
     def update_gui(self):
 
         self.task_description.configure(text=self.tasks[self.current_step][0])
+        self.img = PhotoImage(file = self.tasks[self.current_step][3]).subsample(1,1)
+        self.task_image.configure(image=self.img)
         for i in range(len(self.tasks)):
-            if i > self.max_step:
-                self.task_buttons[i].configure(state="disabled")
+            if not self.completed[i]:
+                self.task_buttons[i].configure(bg = "dim gray", relief=SUNKEN)
             else:
-                self.task_buttons[i].configure(state="normal")
+                self.task_buttons[i].configure(bg = "lime green", relief=RAISED)
             if i == self.current_step:
-                self.task_buttons[i].configure(style = "TButton")
+                self.task_buttons[i].configure(bg = "light grey", relief=RAISED)
+                if self.completed[i]:
+                    self.task_buttons[i].configure(bg = "pale green", relief=RAISED)
 
     def check(self):
 
         if self.checker.check():
+            self.completed[self.current_step] = True
             self.advance_step()
             showinfo(message="Поздравляю")
         else:
