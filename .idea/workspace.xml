@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="added work to gitignore&#10;also added a gitignore">
-      <change afterPath="$PROJECT_DIR$/code/scrollframe.py" afterDir="false" />
+    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="Reworked style&#10;Added images&#10;test lesson">
+      <change afterPath="$PROJECT_DIR$/code/taskchooser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/Task1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/Task1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/reverser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/reverser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/taskui.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/taskui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/converter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.converter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.taskparser.executor&quot;: &quot;Run&quot;,
-    &quot;Python.taskui.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/MyProjects/InteractiveLearning&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Main.executor": "Run",
+    "Python.converter.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.taskparser.executor": "Run",
+    "Python.taskui.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/MyProjects/InteractiveLearning",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\MyProjects\InteractiveLearning" />
@@ -171,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742285802739</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Reworked style&#10;Added images&#10;test lesson">
+      <option name="closed" value="true" />
+      <created>1742376787425</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742376787425</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -180,20 +185,31 @@
     <MESSAGE value="revamp" />
     <MESSAGE value="uhhhhhhh" />
     <MESSAGE value="added work to gitignore&#10;also added a gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added work to gitignore&#10;also added a gitignore" />
+    <MESSAGE value="Reworked style&#10;Added images&#10;test lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reworked style&#10;Added images&#10;test lesson" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/taskui.py</url>
-          <line>87</line>
+          <line>91</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/taskui.py</url>
-          <line>71</line>
+          <line>75</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/__main__.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/taskui.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
