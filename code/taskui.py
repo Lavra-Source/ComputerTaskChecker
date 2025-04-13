@@ -36,7 +36,7 @@ class TaskUI:
         img = img.subsample(w,w)
         return img
     def __init__(self, task_number, root):
-        print("huh")
+        root.tk_setPalette(background = "gray24")
         for widget in root.winfo_children():
             widget.destroy()
         #self.cmd = on_exit
@@ -49,7 +49,7 @@ class TaskUI:
         os.makedirs(os.path.join(root_dir, 'work'))
         os.startfile(os.path.join(root_dir, 'work'))
         task_file_path = os.path.join(task_dir, f'Task{task_number}.json')
-        self.task_file = open(task_file_path)
+        self.task_file = open(task_file_path, encoding = "utf-8-sig")
 
         self.task_parser = TaskParser(self.task_file)
 
@@ -64,7 +64,7 @@ class TaskUI:
         self.frame.pack(fill="both", expand=True)
         self.frame.rowconfigure(1, weight=1)
         self.frame.columnconfigure(0, weight=1)
-        task_frame = Frame(self.frame, relief=RAISED, pady=5, padx=3)
+        task_frame = Frame(self.frame, pady=5, padx=3)
         task_frame.grid(column=0, row = 0,sticky = "nwse")
         a_frame = ScrollFrame(self.frame)
         a_frame.grid(column=0, row=1, sticky="nwse")
@@ -72,17 +72,20 @@ class TaskUI:
         main_frame.configure(bg = "white")
         main_frame.pack(fill = BOTH, side = LEFT)
         self.task_buttons = []
-        self.task_description = Label(main_frame, text=self.tasks[self.current_step][0], wraplength=500, bg="white", justify="left")
+        self.task_description = Label(main_frame, text=self.tasks[self.current_step][0], wraplength=600, bg="white", fg="black", justify="left")
         self.img = PhotoImage(file = self.tasks[self.current_step][3]).subsample(1,1)
         self.task_image = Label(main_frame, image = self.img)
-        self.check_button = Button(self.frame, text = "Проверить", command=self.check, bg = "light green")
+        self.lesson_label = Label(task_frame, text  = f"Урок №{task_number}", justify="right")
+        self.check_button = Button(self.frame, text = "Проверить", command=self.check, bg = "lime green", fg = "black", relief=FLAT, borderwidth=0)
         for i in range(len(self.tasks)):
             cmd = partial( self.set_step, i)
-            self.task_buttons.append(Button(task_frame, text = str(i+1), command=cmd, width = 2))
-            self.task_buttons[i].grid(column = i, row = 0, sticky = "nw")
+            self.task_buttons.append(Button(task_frame, text = str(i+1), command=cmd, width = 2, fg = "black", borderwidth=0))
+            self.task_buttons[i].grid(column = i, row = 0, sticky = "nw", padx = 1)
+        task_frame.columnconfigure(len(self.tasks), weight = 1)
         self.task_description.grid(column = 0, row = 0, sticky = "nw")
         self.check_button.grid(column = 0, row = 2, sticky = "s", pady = 10)
         self.task_image.grid(column = 0, row = 1, sticky = "e")
+        self.lesson_label.grid(column = len(self.tasks), row = 0, sticky = "e")
         self.update_gui()
         self.set_step(0)
 
@@ -93,13 +96,13 @@ class TaskUI:
         self.task_image.configure(image=self.img)
         for i in range(len(self.tasks)):
             if not self.completed[i]:
-                self.task_buttons[i].configure(bg = "dim gray", relief=SUNKEN)
+                self.task_buttons[i].configure(bg = "dim gray", relief=FLAT)
             else:
-                self.task_buttons[i].configure(bg = "lime green", relief=RAISED)
+                self.task_buttons[i].configure(bg = "lime green", relief=FLAT)
             if i == self.current_step:
-                self.task_buttons[i].configure(bg = "light grey", relief=RAISED)
+                self.task_buttons[i].configure(bg = "white", relief=FLAT)
                 if self.completed[i]:
-                    self.task_buttons[i].configure(bg = "pale green", relief=RAISED)
+                    self.task_buttons[i].configure(bg = "pale green", relief=FLAT)
 
     def check(self):
 

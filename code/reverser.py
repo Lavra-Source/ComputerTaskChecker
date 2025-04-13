@@ -5,7 +5,7 @@ import os
 class Reverser:
     def create(self, d, file_path):
         if d["type"] == "file":
-            with open(file_path, 'w') as file:
+            with open(file_path, 'w', encoding = "utf-8") as file:
                 # Write content to the file
                 file.write(d["content"])
         else:
