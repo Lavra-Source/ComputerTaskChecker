@@ -1,6 +1,14 @@
-from converter import path_to_dict
 import os
+def path_to_dict(path):
+    d = {'name': os.path.basename(path)}
+    if os.path.isdir(path):
+        d['type'] = "directory"
+        d['children'] = [path_to_dict(os.path.join(path,x)) for x in os.listdir(path)]
+    else:
+        d['type'] = "file"
+        d["content"] = open(path, 'r', encoding="utf-8-sig").read()
 
+    return d
 class Checker:
 
     def __init__(self, tasks, step):

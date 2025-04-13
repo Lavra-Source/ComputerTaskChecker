@@ -2,9 +2,7 @@ import tkinter as tk
 import platform
 
 
-# ************************
-# Scrollable Frame Class
-# ************************
+
 class ScrollFrame(tk.Frame):
     def __init__(self, parent):
         super().__init__(parent)  # create a frame (self)
@@ -33,7 +31,6 @@ class ScrollFrame(tk.Frame):
             None)  # perform an initial stretch on render, otherwise the scroll region has a tiny border until the first resize
 
     def onFrameConfigure(self, event):
-        '''Reset the scroll region to encompass the inner frame'''
         self.canvas.configure(scrollregion=self.canvas.bbox(
             "all"))  # whenever the size of the frame changes, alter the scroll region respectively.
 

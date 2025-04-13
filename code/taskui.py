@@ -11,9 +11,6 @@ from reverser import Reverser
 from scrollframe import ScrollFrame
 
 class TaskUI:
-    def quit(self):
-        self.frame.destroy()
-        #self.cmd()
     def advance_step(self):
         if False not in self.completed:
             showinfo(message="Вы завершили урок!")
@@ -39,7 +36,6 @@ class TaskUI:
         root.tk_setPalette(background = "gray24")
         for widget in root.winfo_children():
             widget.destroy()
-        #self.cmd = on_exit
         # Get Task1.json
         current_dir = os.path.dirname(os.path.abspath(__file__))
         root_dir = os.path.dirname(current_dir)
@@ -109,6 +105,6 @@ class TaskUI:
         if self.checker.check():
             self.completed[self.current_step] = True
             self.advance_step()
-            showinfo(message="Поздравляю")
+            showinfo(message="Правильно")
         else:
             showerror(message="Неверно")

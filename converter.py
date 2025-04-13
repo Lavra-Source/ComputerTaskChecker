@@ -5,21 +5,12 @@ import os
 import sys
 import json
 site.addsitedir('./code')  # Always appends to end
-print(sys.path)
+from checker import path_to_dict
 d = dict()
 tasks = []
 sys.stdin.reconfigure(encoding='utf-8-sig')
 sys.stdout.reconfigure(encoding='utf-8-sig')
-def path_to_dict(path):
-    d = {'name': os.path.basename(path)}
-    if os.path.isdir(path):
-        d['type'] = "directory"
-        d['children'] = [path_to_dict(os.path.join(path,x)) for x in os.listdir(path)]
-    else:
-        d['type'] = "file"
-        d["content"] = open(path, 'r', encoding="utf-8-sig").read()
 
-    return d
 
 if __name__ == "__main__":
     print("input number of subtasks")
