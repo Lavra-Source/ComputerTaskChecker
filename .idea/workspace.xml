@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="img">
+    <list default="true" id="d5d1a6bd-b045-45c9-a0a7-5838b30b36ca" name="Changes" comment="a tiny bit of refactoring and text changing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/scrollframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/scrollframe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/taskchooser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/taskui.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/taskui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tasks/Task1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/Task1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/reverser.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/reverser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/converter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,10 @@
     &quot;accountId&quot;: &quot;a59aa226-1207-4db9-a629-b6390565a151&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python312/Lib/shutil.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python312/Lib/tkinter/__init__.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -63,6 +66,7 @@
     &quot;Python.taskparser.executor&quot;: &quot;Run&quot;,
     &quot;Python.taskui.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/MyProjects/InteractiveLearning/converter.py&quot;,
@@ -233,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744516653912</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="a tiny bit of refactoring and text changing">
+      <option name="closed" value="true" />
+      <created>1744525641573</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744525641573</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,7 +257,8 @@
     <MESSAGE value="Reworked style&#10;Added images&#10;test lesson" />
     <MESSAGE value="uhhhhh" />
     <MESSAGE value="img" />
-    <option name="LAST_COMMIT_MESSAGE" value="img" />
+    <MESSAGE value="a tiny bit of refactoring and text changing" />
+    <option name="LAST_COMMIT_MESSAGE" value="a tiny bit of refactoring and text changing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

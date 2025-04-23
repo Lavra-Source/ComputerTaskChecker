@@ -1,7 +1,6 @@
-from venv import create
-
 import shutil
 import os
+
 class Reverser:
     def create(self, d, file_path):
         if d["type"] == "file":
@@ -25,3 +24,4 @@ class Reverser:
         shutil.rmtree(task_dir, ignore_errors=False)
         self.create(self.tasks[step][1], task_dir)
         print(f"reversed to step {step}")
+

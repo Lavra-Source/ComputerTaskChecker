@@ -9,7 +9,7 @@ from taskui import TaskUI
 sys.stdin.reconfigure(encoding='utf-8-sig')
 sys.stdout.reconfigure(encoding='utf-8-sig')
 root = Tk()
-root.title("Учебное пособие по информатике")
+root.title("Файлик")
 root.geometry("1280x600")
 s = ttk.Style()
 root.columnconfigure(0, weight=1)

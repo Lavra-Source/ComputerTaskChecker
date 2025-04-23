@@ -1,7 +1,4 @@
 import site
-import ntpath
-
-import os
 import sys
 import json
 site.addsitedir('./code')  # Always appends to end
